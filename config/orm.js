@@ -19,7 +19,7 @@ var orm = {
         });
 	},
 
-	insertOne: function(tableInput, nameInput, devourInput callback){
+	insertOne: function(tableInput, nameInput, devourInput, callback){
 		var s = 'INSERT INTO ' + tableInput + ' (burger_name, devoured) VALUES (?,?)';
 		connection.query(s,[nameInput , devourInput], function(err, result) {
 		if (err) throw err;	 	
@@ -29,7 +29,7 @@ var orm = {
 	},
 
 	// Here our ORM is updating a simple method for updating burgers
-	
+
 	updateOne: function(tableInput, colInput, idInput, callback, cb){
 		var s = 'UPDATE INTO' + tableInput + 'SET devoured = ? Where id = ?';
 		connection.query(s,[routeName, newBurger.name, newBurger.devoured, newBurger.date], function(err, result) {

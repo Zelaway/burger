@@ -8,7 +8,7 @@ var express 	= require('express');
 var methodOverride = require('method-override');
 var bodyParser 	= require('body-parser');
 
-
+var app = express();
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
@@ -34,7 +34,7 @@ app.listen(port);
 console.log(module.exports)
 
 
-// --Orignal Code...is there any reson as to the order--//
+// --Orignal Code...is there any reason as to the order--//
 // // Sets up the Express App
 // // =============================================================
 // var app = express();

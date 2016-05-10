@@ -1,3 +1,7 @@
+var express = require('express');
+var router = express.Router();
+var burger = require('../models/burger.js');
+
 //get route -> index
 router.get('/', function(req,res) {
 	//express callback response by calling burger.selectAllBurger
@@ -27,4 +31,4 @@ router.put('/update', function(req,res){
 });
 
 module.exports = router;
-Status API Training Shop Blog About
+
