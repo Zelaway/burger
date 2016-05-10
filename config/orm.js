@@ -4,7 +4,7 @@
 
 // Dependencies
 // =============================================================
-var connection = require('./connection.js');
+var connection = require('../config/connection.js');
 
 var orm = {
 
@@ -30,7 +30,7 @@ var orm = {
 
 	// Here our ORM is updating a simple method for updating burgers
 
-	updateOne: function(tableInput, colInput, idInput, callback, cb){
+	updateOne: function(tableInput, colInput, idInput, callback){
 		var s = 'UPDATE INTO' + tableInput + 'SET devoured = ? Where id = ?';
 		connection.query(s,[routeName, newBurger.name, newBurger.devoured, newBurger.date], function(err, result) {
         if (err) throw err;   
