@@ -1,8 +1,8 @@
-INSERT INTO burgers VALUES (1, 'half-pound with cheese', 1, '2016-05-10');
+INSERT INTO burgers (burger_name, devoured, date) VALUES ('half-pound with cheese', FALSE, CURRENT_TIMESTAMP);
 
-INSERT INTO burgers VALUES (2, 'double bacoon with cheese', 1, '2016-05-10');
+INSERT INTO burgers (burger_name, devoured, date) VALUES ('double-bacoon-with-cheese', FALSE, CURRENT_TIMESTAMP);
 
-INSERT INTO burgers VALUES (3, 'turkey burger', 1, '2016-05-10');
+INSERT INTO burgers (burger_name, devoured, date) VALUES ('turkey-burger', FALSE, CURRENT_TIMESTAMP);
 
-INSERT INTO burgers VALUES (4, 'triple cheese bacon burger', 1, '2016-05-10');
+INSERT INTO burgers (burger_name, devoured, date) VALUES ('triple-cheese-bacon-burger', FALSE, CURRENT_TIMESTAMP);
 
