@@ -11,7 +11,7 @@ var orm = {
 	// Here our ORM is creating a simple method for performing a query of the entire table.
 	// We make use of the callback to ensure that data is returned only once the query is done.
 	selectAll: function(tableInput, callback){
-		var s = 'SELECT * FROM ' + tableName +';';
+		var s = 'SELECT * FROM ' + tableInput +';';
 		connection.query(s, function(err, result) {
 			if (err) throw err;
             callback(result);
