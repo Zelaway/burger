@@ -24,6 +24,8 @@ router.post('/create', function(req, res) {
 //put route -> back to index
 router.put('/update', function(req,res){
 	burger.eatBurger(req.body.burger_id, function(result){
+		console.log(req.body.burger_id);
+		console.log("teståß");
 		//wrapper for orm.js that using MySQL update callback will return a log to console, render back to index with handle
 		console.log(result);
 		res.redirect('/');

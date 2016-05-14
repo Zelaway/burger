@@ -31,8 +31,8 @@ var orm = {
 	// Here our ORM is updating a simple method for updating burgers
 
 	updateOne: function(tableInput, colInput, idInput, callback){
-		var s = 'UPDATE INTO' + tableInput + 'SET devoured = ? Where id = ?';
-		connection.query(s,[routeName, newBurger.name, newBurger.devoured, newBurger.date], function(err, result) {
+		var s = 'UPDATE ' + tableInput + ' SET devoured = ? WHERE id = ?';
+		connection.query(s,[colInput, idInput], function(err, result) {
         if (err) throw err;   
         callback(result);		
 
